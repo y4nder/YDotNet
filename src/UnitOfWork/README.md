@@ -2,6 +2,8 @@
 
 This library provides a **simple and efficient implementation** of the **Unit of Work** pattern for **Entity Framework Core** applications. Inspired by best practices, this ensures that all **database operations** within a business transaction are handled **consistently and atomically**.  
 
+🔗 **NuGet Package:** [YDotNet.UnitOfWork](https://www.nuget.org/packages/YDotNet.UnitOfWork/)
+
 ## ✨ Features  
 
 ✅ **Clean abstraction** over Entity Framework Core's `DbContext`  

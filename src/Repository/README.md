@@ -2,6 +2,11 @@
 
 This project provides a **generic repository pattern** implementation for .NET applications using **Entity Framework Core**. Inspired by **Java Spring's repository approach**, this abstraction layer helps separate business logic from data access logic, making your application **more maintainable, scalable, and testable**.  
 
+
+
+🔗 **NuGet Package:** [YDotNet.Repository](https://www.nuget.org/packages/YDotNet.Repository/)
+
+
 ## ✨ Features  
 
 ✅ Generic repository that works with **any entity type**  

@@ -1,26 +1,34 @@
-﻿# ResultType
+﻿# 🚀 ResultType
 
-## Overview
-`ResultType` is a lightweight C# library designed to facilitate structured handling of operation results in .NET applications. It provides a `Result` type that encapsulates success or failure outcomes, along with error details, and includes ASP.NET Core integration for seamless API response handling.
+## 🌟 Overview
+**ResultType** is a lightweight and powerful C# library designed to streamline structured handling of operation results in .NET applications. It provides a `Result` type that encapsulates success or failure outcomes, along with detailed error information. With built-in ASP.NET Core integration, it simplifies API response handling effortlessly.
 
-## Features
-- Strongly-typed `Result` and `Result<T>` for representing success or failure states.
-- Built-in error handling with `IError`, `Error`, and `ValidationError`.
-- ASP.NET Core minimal API integration via `ToHttpResult()`.
-- Utility methods like `Match()` for streamlined success/failure handling.
+🔗 **NuGet Package:** [YDotNet.ResultType](https://www.nuget.org/packages/YDotNet.ResultType/)
 
-## Installation
+---
 
-You can add `ResultType` to your .NET project using:
+## ✨ Features
+✅ Strongly-typed `Result` and `Result<T>` for clear success/failure handling.  
+✅ Built-in error management with `IError`, `Error`, and `ValidationError`.  
+✅ **ASP.NET Core** integration with `ToHttpResult()` for easy API responses.  
+✅ Utility methods like `Match()` for streamlined handling.  
+✅ Implicit conversions for clean and concise code.  
 
-```bash
-dotnet add package YDotNet.Repository
-``` 
+---
 
+## 📦 Installation
 
-## Usage
+Add **ResultType** to your .NET project using:
 
-### Basic Success and Failure Handling
+```sh
+ dotnet add package YDotNet.ResultType
+```
+
+---
+
+## 🚀 Quick Start
+
+### ✅ Basic Success & Failure Handling
 ```csharp
 using ResultType;
 using ResultType.Errors;
@@ -34,9 +42,7 @@ if (failureResult.IsFailure)
 }
 ```
 
-
-
-### Working with Generic Results
+### 🔹 Handling Generic Results
 ```csharp
 var successWithValue = Result.Success("Hello, World!");
 var failureWithValue = Result.Failure<string>(new Error("InvalidData", "The provided data is incorrect.", 400));
@@ -47,23 +53,22 @@ if (successWithValue.IsSuccess)
 }
 ```
 
-### Working with Http Results
+### 🌐 Converting to HTTP Results (ASP.NET Core)
 ```csharp
-var successWithValue = Result.Success("Hello, World!");
-var failureWithValue = Result.Failure<string>(new Error("InvalidData", "The provided data is incorrect.", 400));
-
-IResult success = successWithValue.toHttpResult();
-IResult failure = failureWithValue.toHttpResult();
+IResult success = Result.Success("Hello, World!").ToHttpResult();
+IResult failure = Result.Failure<string>(new Error("InvalidData", "The provided data is incorrect.", 400)).ToHttpResult();
 ```
 
-### Implicit Conversion
+### 🔄 Implicit Conversion
 ```csharp
 Result<string> result = "Implicit success"; // Automatically wraps value in Result.Success
 ```
 
-## ASP.NET Core Integration
+---
 
-### Returning `Result` in Minimal APIs
+## 🌍 ASP.NET Core Integration
+
+### 🏗️ Using `Result` in Minimal APIs
 ```csharp
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -83,21 +88,24 @@ app.MapGet("/user/{id}", (int id) =>
 app.Run();
 ```
 
-## Error Handling
+---
 
-### Custom Error Handling
+## ⚠️ Error Handling
+
+### 🛠️ Custom Error Handling
 ```csharp
 Error error = new Error("Forbidden", "You are not authorized to access this resource.", 403);
 Result failure = Result.Failure(error);
 ```
 
-## License
-This project is licensed under the MIT License.
+---
 
-## Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests.
+## 📜 License
+This project is licensed under the **MIT License**.
 
 ---
 
+## 🤝 Contributing
+We welcome contributions! Feel free to **open issues** or **submit pull requests**.
 
 
