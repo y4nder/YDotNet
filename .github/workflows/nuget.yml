@@ -2,13 +2,8 @@ name: Publish NuGet Packages
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - 'src/Repository/**'
-      - 'src/ResultType/**'
-      - 'src/UnitOfWork/**'
-      - 'src/YanderTests/**'
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 env:
