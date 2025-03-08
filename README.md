@@ -1,5 +1,5 @@
 
-# **YDotNet 🚀 - The Ultimate .NET Utility Library**  
+# **YDotNet 🚀 - A .NET Utility Library**  
 
 **Yander** is a powerful .NET library designed to help you build **robust, scalable, and maintainable applications** with ease. It brings together three essential components that streamline **error handling, data access, and transactional operations**.  
 
@@ -14,7 +14,7 @@ A powerful **Result pattern** implementation to handle errors without exceptions
 ✅ Keep your error handling **type-safe & predictable**  
 ✅ Clearly separate **success** and **failure** paths  
 
-📖 **[Read the ResultType Documentation →](#)**  
+📖 **[Read the ResultType Documentation →](/src/ResultType/re)**  
 
 ---  
 
@@ -25,7 +25,7 @@ A flexible **repository pattern** implementation that simplifies **data access**
 🌐 Supports **various data sources**  
 🧩 Seamless **integration with UnitOfWork**  
 
-📖 **[Read the Repository Documentation →](#)**  
+📖 **[Read the Repository Documentation →](/src/Repository/README.md)**  
 
 ---  
 
@@ -36,7 +36,7 @@ A clean **Unit of Work** implementation for managing transactions and ensuring *
 ⚡ Works perfectly with **the Repository pattern**  
 📌 Simplifies **data persistence**  
 
-📖 **[Read the UnitOfWork Documentation →](#)**  
+📖 **[Read the UnitOfWork Documentation →](/src/UnitOfWork/README.md)**  
 
 ---
 
