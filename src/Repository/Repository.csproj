@@ -4,10 +4,38 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>YDotNet.Repository</PackageId>
+    <Title>YDotNet.Repository</Title>
+    <Version>0.0.0</Version>
+    <Authors>Leander Lorenz Lubguban</Authors>
+    <Company>Yander</Company>
+    <Copyright>Copyright © 2024 Leander Lorenz Lubguban</Copyright>
+    <Description>YDotNet.Repository is a flexible and robust implementation of the Repository pattern for .NET applications. It provides a clean abstraction layer between your domain model and data access logic. Features include:
+
+- Generic repository implementation
+- Entity Framework Core integration
+- Async/await first design
+- CRUD operations support
+- Specification pattern support
+- Query optimization capabilities</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/y4nder/YDotNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/y4nder/YDotNet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>repository-pattern;entity-framework-core;data-access;crud;specification-pattern;orm;database;ef-core;yander</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

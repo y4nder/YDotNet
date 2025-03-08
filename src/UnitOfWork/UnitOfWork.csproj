@@ -4,10 +4,38 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>YDotNet.UnitOfWork</PackageId>
+    <Title>YDotNet.UnitOfWork</Title>
+    <Version>0.0.0</Version>
+    <Authors>Leander Lorenz Lubguban</Authors>
+    <Company>Yander</Company>
+    <Copyright>Copyright © 2024 Leander Lorenz Lubguban</Copyright>
+    <Description>YDotNet.UnitOfWork implements the Unit of Work pattern for maintaining data consistency in .NET applications. It provides a robust way to manage database transactions and ensure data integrity. Features include:
+
+- Atomic transaction management
+- Entity Framework Core integration
+- Async/await support
+- Repository pattern integration
+- Transaction scoping
+- Automatic rollback on failure</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/y4nder/YDotNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/y4nder/YDotNet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>unit-of-work;transaction-management;entity-framework-core;data-consistency;database;ef-core;repository-pattern;yander</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
