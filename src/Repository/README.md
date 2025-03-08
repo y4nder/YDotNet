@@ -86,6 +86,3 @@ Contributions are **welcome**! 🎉 Feel free to submit issues, bug fixes, or fe
 
 📝 **MIT License** – Free to use and modify!  
 
----
-
-This version makes the README **more engaging** while keeping it **professional and informative**. Let me know if you’d like any additional tweaks! 🚀😊
