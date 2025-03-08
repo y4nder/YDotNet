@@ -14,8 +14,8 @@ on:
 env:
   PACKAGE_OUTPUT_DIR: ${{ github.workspace }}/output
   NUGET_SOURCE_URL: "https://api.nuget.org/v3/index.json" 
+  NUGET_AUTH_TOKEN: ${{secrets.NUGET_AUTH_TOKEN}}
   NUGET_API_KEY: ${{ secrets.NUGET_AUTH_TOKEN }}
-  NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 jobs:
   build-test:
@@ -56,8 +56,8 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x'
-          source-url: ${{ env.NUGET_SOURCE_URL }}
-      
+          source-url: ${{ env.NUGET_SOURCE_URL }}  
+              
       - name: Get Version from Git Tags
         id: version
         uses: battila7/get-version-action@v2
