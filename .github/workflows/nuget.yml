@@ -70,7 +70,7 @@ jobs:
         run: |
           for project in Repository ResultType UnitOfWork; do
             if [ -d "src/$project" ]; then
-              dotnet pack src/$project --configuration Release --include-symbols -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --no-build --output ${{ env.PACKAGE_OUTPUT_DIR }}
+              dotnet pack src/$project --configuration Release -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --no-build --output ${{ env.PACKAGE_OUTPUT_DIR }}
             else
               echo "Directory src/$project does not exist. Skipping."
             fi
@@ -78,4 +78,4 @@ jobs:
 
       - name: Push to NuGet.org
         run: |
-          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIR }}/*.nupkg --api-key "${{ env.NUGET_API_KEY }}" --source ${{ env.NUGET_SOURCE_URL }}
+          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIR }}/*.nupkg --api-key "${{ env.NUGET_API_KEY }}" --source ${{ env.NUGET_SOURCE_URL }} --skip-duplicate
