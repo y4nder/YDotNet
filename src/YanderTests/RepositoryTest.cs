@@ -28,6 +28,7 @@ public class RepositoryTest
     private readonly TestRepository _repository;
     private readonly List<TestEntity> _data;
 
+    #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     public RepositoryTest()
     {
         try

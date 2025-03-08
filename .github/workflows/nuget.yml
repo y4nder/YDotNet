@@ -1,0 +1,81 @@
+name: Publish NuGet Packages
+
+on:
+  push:
+    branches:
+      - nuget
+    paths:
+      - 'src/Repository/**'
+      - 'src/ResultType/**'
+      - 'src/UnitOfWork/**'
+      - 'src/YanderTests/**'
+  workflow_dispatch:
+
+env:
+  PACKAGE_OUTPUT_DIR: ${{ github.workspace }}/output
+  NUGET_SOURCE_URL: "https://api.nuget.org/v3/index.json" 
+  NUGET_API_KEY: ${{ secrets.NUGET_AUTH_TOKEN }}
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore Dependencies
+        run: dotnet restore src
+
+      - name: Build Solution
+        run: dotnet build src --configuration Release --no-restore
+
+      - name: Run Tests
+        run: dotnet test src/YanderTests --configuration Release --no-build --logger "trx;LogFileName=test-results.trx"
+
+      - name: Upload Test Results (Optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: src/YanderTests/TestResults/test-results.trx
+
+  build-and-publish:
+    needs: build-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+          source-url: 'https://api.nuget.org/v3/index.json'
+
+      - name: Get Version from Git Tags
+        id: version
+        uses: battila7/get-version-action@v2
+        with:
+          version-source: "tags"
+          fallback: "0.1.0"
+
+      - name: Restore Dependencies
+        run: dotnet restore src
+
+      - name: Build Solution
+        run: dotnet build src --configuration Release --no-restore
+
+      - name: Pack NuGet Packages
+        run: |
+          for project in Repository ResultType UnitOfWork; do
+            dotnet pack src/$project --configuration Release --include-symbols -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --no-build --output ${{ env.PACKAGE_OUTPUT_DIR }}
+          done
+
+      - name: Push to NuGet.org
+        run: |
+          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIR }}/*.nupkg --api-key "${{ env.NUGET_API_KEY }}" --source ${{ env.NUGET_SOURCE_URL }}

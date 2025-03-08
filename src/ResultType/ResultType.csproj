@@ -4,6 +4,27 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageId>YDotNet.ResultType</PackageId>
+        <Title>YDotNet.ResultType</Title>
+        <Version>0.0.0</Version>
+        <Authors>Leander Lorenz Lubguban</Authors>
+        <Company>Yander</Company>
+        <Copyright>Copyright © 2024 Leander Lorenz Lubguban</Copyright>
+        <Description>ResultType is a lightweight C# library that implements the Result pattern for better error handling in .NET applications. It provides a strongly-typed Result&lt;T&gt; type that encapsulates success or failure outcomes, making it easier to handle errors without exceptions. Features include:
+
+- Fluent API for result handling
+- ASP.NET Core integration for API responses
+- Built-in FluentValidation support
+- Comprehensive error details
+- Extension methods for common operations
+- Thread-safe implementation</Description>
+        <PackageProjectUrl>https://github.com/y4nder/YDotNet</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/y4nder/YDotNet.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>result-type;error-handling;fluent-validation;aspnetcore;result-pattern;railway-oriented-programming;functional;monads;error-management;validation;api-responses;yander</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -11,6 +32,13 @@
         <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
         <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

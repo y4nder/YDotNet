@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace UnitOfWork;
 
-internal class UnitOfWork : IUnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
     private readonly DbContext _context;
 
