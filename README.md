@@ -44,9 +44,9 @@ A clean **Unit of Work** implementation for managing transactions and ensuring *
 Install the components you need using NuGet:  
 
 ```bash
-dotnet add package Yander.ResultType
-dotnet add package Yander.Repository
-dotnet add package Yander.UnitOfWork
+dotnet add package YDotNet.ResultType
+dotnet add package YDotNet.Repository
+dotnet add package YDotNet.UnitOfWork
 ```  
 
 ---

@@ -12,7 +12,9 @@ This project provides a **generic repository pattern** implementation for .NET a
 
 ## 📦 Installation  
 
-🚧 **Coming soon** (NuGet package setup in progress)  
+```bash
+dotnet add package YDotNet.Repository
+```
 
 ## 📌 Usage  
 

@@ -14,7 +14,7 @@ This library provides a **simple and efficient implementation** of the **Unit of
 Add the package to your project:  
 
 ```bash
-dotnet add package Yander.UnitOfWork
+dotnet add package YDotNet.UnitOfWork
 ```
 
 ## 🚀 Usage  

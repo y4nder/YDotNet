@@ -13,10 +13,10 @@
 
 You can add `ResultType` to your .NET project using:
 
-```sh
-// Install via .NET CLI to upload
- 
-```
+```bash
+dotnet add package YDotNet.Repository
+``` 
+
 
 ## Usage
 
