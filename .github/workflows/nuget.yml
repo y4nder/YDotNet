@@ -15,6 +15,7 @@ env:
   PACKAGE_OUTPUT_DIR: ${{ github.workspace }}/output
   NUGET_SOURCE_URL: "https://api.nuget.org/v3/index.json" 
   NUGET_API_KEY: ${{ secrets.NUGET_AUTH_TOKEN }}
+  NUGET_AUTH_TOKEN: ${{secrets.NUGET_AUTH_TOKEN}}
 
 jobs:
   build-test:
