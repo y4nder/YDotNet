@@ -14,7 +14,7 @@ A powerful **Result pattern** implementation to handle errors without exceptions
 ✅ Keep your error handling **type-safe & predictable**  
 ✅ Clearly separate **success** and **failure** paths  
 
-📖 **[Read the ResultType Documentation →](/src/ResultType/re)**  
+📖 **[Read the ResultType Documentation →](/src/ResultType/README.md)**  
 
 ---  
 
