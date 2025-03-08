@@ -3,7 +3,7 @@ name: Publish NuGet Packages
 on:
   push:
     branches:
-      - nuget
+      - main
     paths:
       - 'src/Repository/**'
       - 'src/ResultType/**'
