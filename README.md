@@ -40,6 +40,18 @@ A clean **Unit of Work** implementation for managing transactions and ensuring *
 
 ---
 
+### **4️⃣ NoSqlRepository – Simplified NoSQL Data Access**
+An intuitive **NoSQL repository pattern** implementation for managing data in **NoSQL databases** such as MongoDB, Cassandra, and others. Features include:  
+📝 **CRUD Operations**: Create, Read, Update, and Delete documents with ease.  
+🧑‍💻 **Pagination**: Seamlessly paginate your read operations to fetch data in chunks.  
+🔧 **MongoDB Configuration Extension**: Simplify your MongoDB setup with our extension method.  
+💪 **Super Flexible**: Works with any type of entity, just like magic.
+
+📖 **[Read the NoSqlRepository Documentation →](/src/NoSqlRepository/README.md)**
+
+---     
+
+
 ## **📦 Installation**  
 Install the components you need using NuGet:  
 
@@ -47,6 +59,7 @@ Install the components you need using NuGet:
 dotnet add package YDotNet.ResultType
 dotnet add package YDotNet.Repository
 dotnet add package YDotNet.UnitOfWork
+dotnet add package YDotNet.NoSqlRepository
 ```  
 
 ---
