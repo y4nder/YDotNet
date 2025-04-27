@@ -68,7 +68,7 @@ jobs:
 
       - name: Pack NuGet Packages
         run: |
-          for project in Repository ResultType UnitOfWork; do
+          for project in Repository ResultType UnitOfWork NoSqlRepository; do
             if [ -d "src/$project" ]; then
               dotnet pack src/$project --configuration Release -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --no-build --output ${{ env.PACKAGE_OUTPUT_DIR }}
             else
