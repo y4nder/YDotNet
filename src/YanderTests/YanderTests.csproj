@@ -24,6 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\NoSqlRepository\NoSqlRepository.csproj" />
       <ProjectReference Include="..\ResultType\ResultType.csproj" />
       <ProjectReference Include="..\Repository\Repository.csproj" />
       <ProjectReference Include="..\UnitOfWork\UnitOfWork.csproj" />

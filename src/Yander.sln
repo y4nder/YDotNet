@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultType", "ResultType\ResultType.csproj", "{D30EEC3D-28F0-40D4-986A-FE440D89BB1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanderTests", "YanderTests\YanderTests.csproj", "{2EC06082-3EA5-496B-AD23-6846ED20BB06}"
@@ -8,6 +8,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{554AA7CB-22F8-4E7F-B831-7C5331058530}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWork", "UnitOfWork\UnitOfWork.csproj", "{9F39405A-ECA6-449C-879C-5948B5B969CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSqlRepository", "NoSqlRepository\NoSqlRepository.csproj", "{DE7AF613-A6D5-4589-B187-3B99B11E0EA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,5 +33,9 @@ Global
 		{9F39405A-ECA6-449C-879C-5948B5B969CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F39405A-ECA6-449C-879C-5948B5B969CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F39405A-ECA6-449C-879C-5948B5B969CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7AF613-A6D5-4589-B187-3B99B11E0EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7AF613-A6D5-4589-B187-3B99B11E0EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7AF613-A6D5-4589-B187-3B99B11E0EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7AF613-A6D5-4589-B187-3B99B11E0EA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
