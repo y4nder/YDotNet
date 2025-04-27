@@ -1,40 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <!-- Target Framework for the project -->
         <TargetFramework>net8.0</TargetFramework>
-
-        <!-- Enable Implicit Usings for ease of development -->
         <ImplicitUsings>enable</ImplicitUsings>
-
-        <!-- Enable Nullable Reference Types -->
         <Nullable>enable</Nullable>
-
-        <!-- Automatically generate NuGet package during build -->
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-
-        <!-- License expression (MIT license) -->
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-
-        <!-- Unique identifier for the NuGet package -->
-        <PackageId>NoSqlRepository</PackageId>
-
-        <!-- Title of the package -->
-        <Title>NoSqlRepository</Title>
-
-        <!-- Package version placeholder (updated via GitHub Actions) -->
+        <PackageId>YDotNet.NoSqlRepository</PackageId>
+        <Title>YDotNet.NoSqlRepository</Title>
         <Version>0.0.0</Version>
-
-        <!-- Author of the package -->
-        <Authors>Your Name</Authors>
-
-        <!-- Company that maintains the package -->
-        <Company>Your Company</Company>
-
-        <!-- Copyright information -->
-        <Copyright>Copyright © 2024 Your Name</Copyright>
-
-        <!-- Description of the package functionality -->
+        <Authors>Leander Lorenz Lubguban</Authors>
+        <Company>Yander</Company>
+        <Copyright>Copyright © 2024 Leander Lorenz Lubguban</Copyright>
         <Description>
             NoSqlRepository is a flexible and robust implementation of the repository pattern for NoSQL databases.
             It provides a clean abstraction layer between your domain model and data access logic, with built-in MongoDB support.
@@ -46,20 +23,10 @@
             - CRUD operations support
             - Query optimization capabilities
         </Description>
-
-        <!-- Path to the README file -->
         <PackageReadmeFile>README.md</PackageReadmeFile>
-
-        <!-- URL to the project's homepage (GitHub) -->
-        <PackageProjectUrl>https://github.com/yourusername/NoSqlRepository</PackageProjectUrl>
-
-        <!-- Repository URL for NuGet Package -->
-        <RepositoryUrl>https://github.com/yourusername/NoSqlRepository.git</RepositoryUrl>
-
-        <!-- Type of version control (Git) -->
+        <PackageProjectUrl>https://github.com/y4nder/YDotNet</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/y4nder/YDotNet.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-
-        <!-- Tags for the package for NuGet search and discovery -->
         <PackageTags>repository-pattern;nosql;mongodb;data-access;crud;async;repository</PackageTags>
     </PropertyGroup>
 
@@ -68,6 +35,13 @@
       <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
       <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
       <PackageReference Include="MongoDB.Driver" Version="3.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
     </ItemGroup>
 
 </Project>
