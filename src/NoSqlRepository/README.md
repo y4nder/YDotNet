@@ -183,8 +183,6 @@ public class YourService
 }
 ```
 
-Here's the updated README with an additional usage section for the `RestaurantRepository` example, demonstrating how to access MongoDB collections and perform more extensive operations using the `Collection` instance:
-
 ---
 
 ## 🍽️ Custom Repository Example
